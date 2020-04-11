@@ -1,0 +1,10 @@
+/* HEADER STYLES */
+
+header h1 {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+header p {
+    color: #444;
+    font-style: italic;
+}

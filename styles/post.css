@@ -215,9 +215,9 @@ footer {
 @media (max-width: 900px) {
     body {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 20% auto auto auto;
+        grid-template-rows: 10% auto auto auto;
         grid-template-areas: 
-            "sd art"
+            "sd hd"
             "sd art"
             "sd sd2"
             "ft ft";
