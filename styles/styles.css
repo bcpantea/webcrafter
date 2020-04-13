@@ -1,24 +1,100 @@
 /* styles for index.html - homepage of Bogdan's Journey (Personal Blog Site - Udacity project) */
 
 /* CSS file imports */
-
-
 @import url("general.css");
 @import url("header.css");
 @import url("nav.css");
 @import url("footer.css");
 
+
 /* MEDIA QUERIES */
-@media (max-width: 900px) {
+@media (max-width:600px) {
     body {
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 22% auto auto auto auto auto;
+        grid-template-areas: 
+            "hd"
+            "sd"
+            "s1"
+            "s2"
+            "s3"
+            "s4"
+            "ft";
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 600px) { 
+    body {
+        display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 20% auto auto auto auto auto;
+        grid-template-rows: 15% auto auto auto auto auto;
         grid-template-areas: 
             "sd hd"
             "sd s1"
             "sd s2"
             "sd s3"
-            "s4 s4"
+            "sd s4"
             "ft ft";
     }
+}
+
+@media (min-width: 768px) { 
+    body {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% auto auto auto auto auto;
+        grid-template-areas: 
+            "sd hd"
+            "sd s1"
+            "sd s2"
+            "sd s3"
+            "sd s4"
+            "ft ft";
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-columns: 20% auto auto auto;
+        grid-template-rows: 15% 30% auto 10%;
+        grid-template-areas: 
+            "sd hd hd hd"
+            "sd s1 s2 s3"
+            "sd s4 s4 s4"
+            "sd ft ft ft";
+    }
+    
+}
+
+
+/* GRID ASSIGNMENTS */ 
+header {
+    grid-area: hd;
+}
+
+nav {
+    grid-area: sd;
+}
+
+#section_1 {
+    grid-area: s1;
+}
+
+#section_2 {
+    grid-area: s2;
+}
+
+#section_3 {
+    grid-area: s3;
+}
+
+#section_4 {
+    grid-area: s4;
+}
+
+footer {
+    grid-area: ft;
 }
